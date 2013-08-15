@@ -171,7 +171,7 @@ function redirect(db, collection) {
   if (db !== undefined) {
     db = mongojs(db, [collection || 'chronicle'])
     module.exports.output = function (message, indent, callback) {
-      var timestamp = new Date()
+      var timestamp = (new Date()).toISOString()
       if (timestamp !== lastMessage) {
         lastMessage = timestamp
         messageID++
