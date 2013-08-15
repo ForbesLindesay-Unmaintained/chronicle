@@ -3,12 +3,16 @@
   "version": "0.0.0",
   "description": "Logging with support for MongoDB",
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "bash-color": "0.0.3",
+    "mongojs": "~0.7.14"
+  },
   "devDependencies": {
-    "mocha": "*"
+    "express": "~3.3.5",
+    "request": "~2.26.0"
   },
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "node test/index.js"
   },
   "repository": {
     "type": "git",
