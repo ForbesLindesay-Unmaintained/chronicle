@@ -44,6 +44,9 @@ var request = require('request')
 var chronicle = require('../')
 var app = require('express')()
 
+//if you redirect to undefined, it's a no-op
+chronicle.redirect(undefined)
+
 app.use(chronicle.requests(__filename))
 app.get('/', function (req, res) {
   testTiming(csl.time(), req, function () {

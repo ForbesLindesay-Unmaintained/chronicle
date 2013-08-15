@@ -168,7 +168,7 @@ function formatInline(arg) {
 
 
 function redirect(db, collection) {
-  if (mongo !== undefined) {
+  if (db !== undefined) {
     db = mongojs(db, [collection || 'chronicle'])
     module.exports.output = function (message, indent, callback) {
       var timestamp = new Date()
