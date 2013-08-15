@@ -229,7 +229,7 @@ function handleGlobalErrors() {
 }
 
 function onUncaughtException(err) {
-  output({
+  module.exports.output({
     type: 'application/crash',
     level: 'error',
     message: err.stack || err.message || err,
