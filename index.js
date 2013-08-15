@@ -91,7 +91,7 @@ function output(message, indent, callback) {
       timeout: setTimeout(function () {
         loggingRequests[message.requestID].res = {type: 'server/timeout', level: 'warn', timestamp: new Date()}
         outputRequest(message.requestID)
-      }, 10000)
+      }, 60000)
     }
     return
   } else if (message.requestID && message.type === 'server/response' && loggingRequests[message.requestID]) {
