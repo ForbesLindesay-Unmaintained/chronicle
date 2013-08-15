@@ -258,7 +258,7 @@ function clone(obj, circular) {
   } else if (obj) {
     var res = {}
     for (var key in obj) {
-      if (typeof v !== 'object') {
+      if (typeof obj[key] !== 'object') {
         res[key] = obj[key]
       } else if (circular.indexOf(obj[key]) != -1) {
         res[key] = undefined
