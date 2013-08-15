@@ -246,6 +246,7 @@ function clone(obj, circular) {
   }
   if (Array.isArray(obj)) {
     obj = obj.map(function (v) {
+      if (typeof v !== 'object') return v
       if (circular.indexOf(v) != -1) return undefined
       circular.push(v)
       return v
@@ -257,7 +258,9 @@ function clone(obj, circular) {
   } else if (obj) {
     var res = {}
     for (var key in obj) {
-      if (circular.indexOf(obj[key]) != -1) {
+      if (typeof v !== 'object') {
+        res[key] = obj[key]
+      } else if (circular.indexOf(obj[key]) != -1) {
         res[key] = undefined
       } else {
         circular.push(obj[key])
