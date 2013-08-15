@@ -236,7 +236,8 @@ function onUncaughtException(err) {
     raw: true,
     timestamp: new Date()
   }, '', function () {
-    throw err
+    console.error(err.stack || err.message || err)
+    process.exit(1)
   })
 }
 
