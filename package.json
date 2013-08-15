@@ -1,6 +1,6 @@
 {
   "name": "chronicle",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Logging with support for MongoDB",
   "keywords": [],
   "dependencies": {
