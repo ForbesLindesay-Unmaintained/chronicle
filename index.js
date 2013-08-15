@@ -175,6 +175,8 @@ function redirect(db, collection) {
       if (timestamp !== lastMessage) {
         lastMessage = timestamp
         messageID++
+      } else {
+        messageID = 0
       }
       message._id = timestamp + '-' + (messageID++)
       if (message.filename) {
