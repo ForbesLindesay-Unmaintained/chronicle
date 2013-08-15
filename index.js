@@ -178,7 +178,7 @@ function redirect(db, collection) {
       }
       message._id = timestamp + '-' + (messageID++)
       if (message.filename) {
-        message.filename = path.relative(module.exports.rootPath, message.filename)
+        message.filename = path.relative(module.exports.rootPath, message.filename).replace(/\\/g, '/')
       }
       db[collection || 'chronicle'].insert(message, function (err) {
         if (err) console.error(err.stack || err.message || err)
