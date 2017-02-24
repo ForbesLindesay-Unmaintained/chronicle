@@ -1,5 +1,7 @@
 # chronicle
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ForbesLindesay/chronicle.svg)](https://greenkeeper.io/)
+
 Logging with support for MongoDB
 
 [![Build Status](https://img.shields.io/travis/ForbesLindesay/chronicle/master.svg)](https://travis-ci.org/ForbesLindesay/chronicle)

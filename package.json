@@ -4,12 +4,12 @@
   "description": "Logging with support for MongoDB",
   "keywords": [],
   "dependencies": {
-    "bash-color": "0.0.3",
-    "mongojs": "~0.7.14"
+    "bash-color": "0.0.4",
+    "mongojs": "~2.4.0"
   },
   "devDependencies": {
-    "express": "~3.3.5",
-    "request": "~2.26.0"
+    "express": "~4.14.1",
+    "request": "~2.79.0"
   },
   "scripts": {
     "test": "node test/index.js"
